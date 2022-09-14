@@ -1,16 +1,16 @@
 # pnmcc-models-2021
 
-Extracted models + *formulas* + oracles where available based on [MCC'2021](http://mcc.lip6.fr) Model Checking Competition.
+Extracted models + *formulas* + oracles where available based on [MCC'2022](http://mcc.lip6.fr) Model Checking Competition.
 
-This project automatically extracts and produces separate archives for each model of the competition, along with "oracle" files that describe the expected values as computed in "expected" by consensus among the competing tools in 2021.
+This project automatically extracts and produces separate archives for each model of the competition, along with "oracle" files that describe the expected values as computed in "expected" by consensus among the competing tools in 2022.
 
-The files are distributed here : [Generated Page](https://yanntm.github.io/pnmcc-models-2021/index.html) as 
+The files are distributed here : [Generated Page](https://yanntm.github.io/pnmcc-models-2022/index.html) as 
 
 * a set of individual model instances and formulas, packaged as a tar.gz per instance.
-* a single archive [oracle.tgz](https://yanntm.github.io/pnmcc-models-2021/oracle.tar.gz) containing all consensus property verdicts 
- and a set of *StateSpace* examination verdict files built from the results of 2021 gold medalist in the category Tedd. 
+* a single archive [oracle.tgz](https://yanntm.github.io/pnmcc-models-2022/oracle.tar.gz) containing all consensus property verdicts 
+ and a set of *StateSpace* examination verdict files built from the results of 2020 gold medalist in the category Tedd. 
  Note the oracles may contain "partial" oracles that contain a question mark `?` for unknown answers that were asked in the contest. 
- These `?` queries should be harder to solve, and we do not have a consensus/accepted answer in 2021.
+ These `?` queries should be harder to solve, and we do not have a consensus/accepted answer in 2022.
  
 The intent is to use these files for development and regression testing of any competing tool. 
 In particular, these files are used for regression and performance testing of [ITS-Tools](http://ddd.lip6.fr), see this [companion GitHub project](https://github.com/yanntm/pnmcc-tests) that uses these files to run tests.
@@ -18,16 +18,16 @@ In particular, these files are used for regression and performance testing of [I
 ## Content of oracle files
 
 The oracle files are simply a "virtual" trace of a correct answer of a tool, in expected MCC format. 
-The first line defines the model instance and examination, then the results are provided with "ORACLE2021" as technique used.
+The first line defines the model instance and examination, then the results are provided with "ORACLE2022" as technique used.
 
 e.g.
 
 ```
 ARMCacheCoherence-PT-none ReachabilityFireability
-FORMULA ARMCacheCoherence-PT-none-ReachabilityFireability-00 FALSE TECHNIQUES ORACLE2021
-FORMULA ARMCacheCoherence-PT-none-ReachabilityFireability-01 FALSE TECHNIQUES ORACLE2021
-FORMULA ARMCacheCoherence-PT-none-ReachabilityFireability-02 TRUE TECHNIQUES ORACLE2021
-FORMULA ARMCacheCoherence-PT-none-ReachabilityFireability-03 FALSE TECHNIQUES ORACLE2021
+FORMULA ARMCacheCoherence-PT-none-ReachabilityFireability-00 FALSE TECHNIQUES ORACLE2022
+FORMULA ARMCacheCoherence-PT-none-ReachabilityFireability-01 FALSE TECHNIQUES ORACLE2022
+FORMULA ARMCacheCoherence-PT-none-ReachabilityFireability-02 TRUE TECHNIQUES ORACLE2022
+FORMULA ARMCacheCoherence-PT-none-ReachabilityFireability-03 FALSE TECHNIQUES ORACLE2022
 ... file shortened...
 ```
 
@@ -47,7 +47,7 @@ The name of the formula is thus always formed of "MODELINSTANCE-EXAMINATION-ID".
 Reachability queries in 2021 could have arbitrary MODELINSTANCE in some cases, and LTL queries were missing the EXAMINATION part.
 
 We have a similar project to host the files for previous years, going back to 2017,e.g. https://github.com/yanntm/pnmcc-models-2020
-These repositories are curated, consensus verdicts that are incorrect are diagnosed and patched (see the edits made in the https://github.com/yanntm/pnmcc-models-2021/blob/master/install_inputs.sh#L57 script).
+These repositories are curated, consensus verdicts that are incorrect are diagnosed and patched (see the edits made in the https://github.com/yanntm/pnmcc-models-2022/blob/master/install_inputs.sh#L57 script).
 
 ## Acknowledgements
 
