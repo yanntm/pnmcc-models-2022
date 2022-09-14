@@ -1,4 +1,4 @@
-# pnmcc-models-2021
+# pnmcc-models-2022
 
 Extracted models + *formulas* + oracles where available based on [MCC'2022](http://mcc.lip6.fr) Model Checking Competition.
 
