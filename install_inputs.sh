@@ -12,7 +12,7 @@ tar xvzf mcc2022-input.tar.gz
 ../7z e mcc2022-input.vmdk
 ../ext2rd 0.img ./:INPUTS
 # for some reason there are a few decompressed examples
-rm -rf INPUTS/RERS2020-PT-pb10*/
+rm -rf INPUTS/RERS2020-PT-pb101 INPUTS/RERS2020-PT-pb102 INPUTS/RERS2020-PT-pb103 INPUTS/RERS2020-PT-pb104 INPUTS/RERS2020-PT-pb105 INPUTS/RERS2020-PT-pb106 INPUTS/RERS2020-PT-pb107 INPUTS/RERS2020-PT-pb108 INPUTS/RERS2020-PT-pb109 
 # cleanup
 rm -f *.vmdk 0.img *.gz 1
 
