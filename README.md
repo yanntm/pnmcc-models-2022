@@ -41,13 +41,8 @@ We used the "collect_tedd.sh" script that lives in this repo to build these orac
 Note that Tedd had a 100% reliability score, so these values should be trustable.  
 Currently we have not yet updated these files, so these are verdicts from the 2020 edition of the contest.
 
-We currently rename a bunch of formulas whose name is inconsistent/not homogeneous. 
-We enforce the rule that every formula name is unique at the benchmark scale for Reachability and LTL queries in particular.
-The name of the formula is thus always formed of "MODELINSTANCE-EXAMINATION-ID".
-Reachability queries in 2021 could have arbitrary MODELINSTANCE in some cases, and LTL queries were missing the EXAMINATION part.
-
-We have a similar project to host the files for previous years, going back to 2017,e.g. https://github.com/yanntm/pnmcc-models-2020
-These repositories are curated, consensus verdicts that are incorrect are diagnosed and patched (see the edits made in the https://github.com/yanntm/pnmcc-models-2022/blob/master/install_inputs.sh#L57 script).
+We have a similar project to host the files for previous years, going back to 2017,e.g. https://github.com/yanntm/pnmcc-models-2021
+These repositories are curated, consensus verdicts that are incorrect are diagnosed and patched (see the edits made in the https://github.com/yanntm/pnmcc-models-2021/blob/master/install_inputs.sh#L57 script).
 
 ## Acknowledgements
 
