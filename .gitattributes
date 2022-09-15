@@ -1,1 +1,3 @@
-*.tgz filter=lfs diff=lfs merge=lfs -text
+*StigmergyCommit-PT-11b.tgz filter=lfs diff=lfs merge=lfs -text
+*TokenRing-PT-050.tgz filter=lfs diff=lfs merge=lfs -text
+*TokenRing-PT-040.tgz filter=lfs diff=lfs merge=lfs -text
