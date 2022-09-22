@@ -35,7 +35,15 @@ cat raw-result-analysis.csv | grep UpperBound | cut -d ',' -f2,3,16 | sort | uni
 
  
 # Patching bad consensus
-# sed -i -e "s/UtilityControlRoom-COL-Z2T3N06-LTLCardinality-08 TRUE/UtilityControlRoom-COL-Z2T3N06-LTLCardinality-08 FALSE/" UtilityControlRoom-COL-Z2T3N06-LTLC.out
+
+# this series is due to errors in ITS-Tools + reinforced by being Gold21 (sorry !)
+sed -i -e "s/QuasiLiveness TRUE/QuasiLiveness FALSE/" SieveSingleMsgMbox-PT-d1m06-QL.out
+sed -i -e "s/QuasiLiveness TRUE/QuasiLiveness FALSE/" SieveSingleMsgMbox-PT-d1m18-QL.out
+sed -i -e "s/QuasiLiveness TRUE/QuasiLiveness FALSE/" SieveSingleMsgMbox-PT-d1m36-QL.out
+sed -i -e "s/QuasiLiveness TRUE/QuasiLiveness FALSE/" SieveSingleMsgMbox-PT-d1m64-QL.out
+sed -i -e "s/QuasiLiveness TRUE/QuasiLiveness FALSE/" SieveSingleMsgMbox-PT-d1m96-QL.out
+
+
 
 mv *.out oracle/
 
