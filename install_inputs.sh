@@ -43,6 +43,14 @@ sed -i -e "s/QuasiLiveness TRUE/QuasiLiveness FALSE/" SieveSingleMsgMbox-PT-d1m3
 sed -i -e "s/QuasiLiveness TRUE/QuasiLiveness FALSE/" SieveSingleMsgMbox-PT-d1m64-QL.out
 sed -i -e "s/QuasiLiveness TRUE/QuasiLiveness FALSE/" SieveSingleMsgMbox-PT-d1m96-QL.out
 
+# these points agree with Gold2021 (ITSTools) and current ITSTools 2022-09
+# but disagree with consensus that is based on ITSTools 2022-05 answer (possibly a bug in SMT solver interaction ? not reproduced so far)
+# no other tool provided an answer on these formulas.
+# We currently believe ITSTools2021+2022-09 is right.
+sed -i -e "s/StigmergyCommit-PT-11a-ReachabilityCardinality-06 TRUE/StigmergyCommit-PT-11a-ReachabilityCardinality-06 FALSE/" StigmergyCommit-PT-11a-RC.out
+sed -i -e "s/StigmergyCommit-PT-11a-ReachabilityCardinality-13 FALSE/StigmergyCommit-PT-11a-ReachabilityCardinality-13 TRUE/" StigmergyCommit-PT-11a-RC.out
+sed -i -e "s/StigmergyCommit-PT-11a-ReachabilityCardinality-14 TRUE/StigmergyCommit-PT-11a-ReachabilityCardinality-14 FALSE/" StigmergyCommit-PT-11a-RC.out
+sed -i -e "s/StigmergyCommit-PT-11a-ReachabilityCardinality-15 FALSE/StigmergyCommit-PT-11a-ReachabilityCardinality-15 TRUE/" StigmergyCommit-PT-11a-RC.out
 
 
 mv *.out oracle/
