@@ -16,8 +16,21 @@ rm -rf INPUTS/RERS2020-PT-pb101 INPUTS/RERS2020-PT-pb102 INPUTS/RERS2020-PT-pb10
 # cleanup
 rm -f *.vmdk 0.img *.gz 1
 
-# patch formula names
-# this step seems no longer necessary in 2022, see relveant script in 2021 repo.
+# remove strange MacOS specific stuff 'LIBARCHIVE.xattr.com.apple.quarantine'
+echo "Patching tgz archives"
+set +x
+cd INPUTS
+for i in *.tgz ;
+do
+	tar xzf $i
+	model=$(echo $i | sed 's/.tgz//g')
+#	echo "Treating : $model"
+	rm $i
+	tar czf $i $model/
+	rm -rf $model/
+done
+cd ..
+set -x
 
 if [ ! -f raw-result-analysis.csv ] 
 then
