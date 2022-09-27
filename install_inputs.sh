@@ -7,7 +7,7 @@ cd website
 
 # grab the vmdk file image for all inputs
 mkdir INPUTS
-wget --no-check-certificate --progress=dot:mega https://mcc.lip6.fr/archives/mcc2022-input.tar.gz
+wget --no-check-certificate --progress=dot:mega https://mcc.lip6.fr/2022/archives/mcc2022-input.tar.gz
 tar xvzf mcc2022-input.tar.gz
 ../7z e mcc2022-input.vmdk
 ../ext2rd 0.img ./:INPUTS
