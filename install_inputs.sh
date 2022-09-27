@@ -35,7 +35,7 @@ set -x
 if [ ! -f raw-result-analysis.csv ] 
 then
 	# grab the raw results file from MCC website
-	wget --no-check-certificate --progress=dot:mega https://mcc.lip6.fr/archives/raw-result-analysis.csv.zip
+	wget --no-check-certificate --progress=dot:mega https://mcc.lip6.fr/2022/archives/raw-result-analysis.csv.zip
 	unzip raw-result-analysis.csv.zip
 fi
 
