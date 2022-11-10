@@ -50,6 +50,7 @@ cat raw-result-analysis.csv | grep UpperBound | cut -d ',' -f2,3,16 | sort | uni
 # Patching bad consensus
 
 # this series is due to errors in ITS-Tools + reinforced by being Gold21 (sorry !)
+# Symmetric choice reduction rule was applied without enough safeguards in this context (LIVENESS/QUASILIVENESS).
 sed -i -e "s/QuasiLiveness TRUE/QuasiLiveness FALSE/" SieveSingleMsgMbox-PT-d1m06-QL.out
 sed -i -e "s/QuasiLiveness TRUE/QuasiLiveness FALSE/" SieveSingleMsgMbox-PT-d1m18-QL.out
 sed -i -e "s/QuasiLiveness TRUE/QuasiLiveness FALSE/" SieveSingleMsgMbox-PT-d1m36-QL.out
@@ -68,6 +69,12 @@ sed -i -e "s/StigmergyCommit-PT-11a-ReachabilityCardinality-15 FALSE/StigmergyCo
 # this point is an error from Tapaal22 that got consensus from Gold21=Tapaal
 # confirmed manually, formula reduces to true trivially (markings are >= 0)
 sed -i -e "s/RERS17pb115-PT-5-LTLCardinality-04 FALSE/RERS17pb115-PT-5-LTLCardinality-04 TRUE/" RERS17pb115-PT-5-LTLC.out
+
+# this is an error of GreatSPN, nobody else answered the query
+# GreatSPN has other errors in LTLF on this model
+# and manual inspection confirms that the transitions cannot stay indefinitely enabled
+sed -i -e "s/DNAwalker-PT-05track28LR-LTLFireability-06 FALSE/DNAwalker-PT-05track28LR-LTLFireability-06 TRUE/" DNAwalker-PT-05track28LR-LTLF.out
+
 
 
 mv *.out oracle/
