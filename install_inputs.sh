@@ -65,6 +65,10 @@ sed -i -e "s/StigmergyCommit-PT-11a-ReachabilityCardinality-13 FALSE/StigmergyCo
 sed -i -e "s/StigmergyCommit-PT-11a-ReachabilityCardinality-14 TRUE/StigmergyCommit-PT-11a-ReachabilityCardinality-14 FALSE/" StigmergyCommit-PT-11a-RC.out
 sed -i -e "s/StigmergyCommit-PT-11a-ReachabilityCardinality-15 FALSE/StigmergyCommit-PT-11a-ReachabilityCardinality-15 TRUE/" StigmergyCommit-PT-11a-RC.out
 
+# this point is an error from Tapaal22 that got consensus from Gold21=Tapaal
+# confirmed manually, formula reduces to true trivially (markings are >= 0)
+sed -i -e "s/RERS17pb115-PT-5-LTLCardinality-04 FALSE/RERS17pb115-PT-5-LTLCardinality-04 TRUE/" RERS17pb115-PT-5-LTLC.out
+
 
 mv *.out oracle/
 
