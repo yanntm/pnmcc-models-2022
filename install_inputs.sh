@@ -75,6 +75,10 @@ sed -i -e "s/RERS17pb115-PT-5-LTLCardinality-04 FALSE/RERS17pb115-PT-5-LTLCardin
 # and manual inspection confirms that the transitions cannot stay indefinitely enabled
 sed -i -e "s/DNAwalker-PT-05track28LR-LTLFireability-06 FALSE/DNAwalker-PT-05track28LR-LTLFireability-06 TRUE/" DNAwalker-PT-05track28LR-LTLF.out
 
+# this seems to be an error of Enpac, nobody else answered the query
+# EnPAC has other errors in LTLC on this model
+# ITS-tools proves it using knowledge approach
+sed -i -e "s/Sudoku-COL-BN16-LTLCardinality-14 FALSE/Sudoku-COL-BN16-LTLCardinality-14 TRUE/" Sudoku-COL-BN16-LTLC.out
 
 
 mv *.out oracle/
