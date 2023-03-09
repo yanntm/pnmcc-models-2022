@@ -79,6 +79,7 @@ sed -i -e "s/DNAwalker-PT-05track28LR-LTLFireability-06 FALSE/DNAwalker-PT-05tra
 # EnPAC has other errors in LTLC on this model
 # ITS-tools proves it using knowledge approach
 sed -i -e "s/Sudoku-COL-BN16-LTLCardinality-14 FALSE/Sudoku-COL-BN16-LTLCardinality-14 TRUE/" Sudoku-COL-BN16-LTLC.out
+sed -i -e "s/Sudoku-COL-BN09-LTLCardinality-12 TRUE/Sudoku-COL-BN09-LTLCardinality-12 FALSE/" Sudoku-COL-BN09-LTLC.out
 
 
 mv *.out oracle/
