@@ -50,6 +50,6 @@ We are grateful to [GitHub](https://github.com) for freely providing build time 
 We thank these companies for thus contributing to the development of quality open source software.
   
 The source model and formulas are extracted from the [Model checking Contest](http://mcc.lip6.fr) under an open access license.
-
+ 
 Packaging and development by Yann Thierry-Mieg, working at LIP6, Sorbonne Université, CNRS.
 This project source code is released under the terms of [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.html).
